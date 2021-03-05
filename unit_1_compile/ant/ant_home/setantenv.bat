@@ -1,5 +1,5 @@
 @echo off
-set ANT_OPTS=-Xmx2G -Dfile.encoding=UTF-8
+set ANT_OPTS=-Xmx512mb -Dfile.encoding=UTF-8
 set ANT_HOME=%~dp0apache-ant
 set PATH=%ANT_HOME%\bin;%PATH%
 rem deleting CLASSPATH as a workaround for PLA-8702
