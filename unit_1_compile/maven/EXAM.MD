@@ -1,6 +1,10 @@
-### generate a maven prject ###
-`$ mvn archetype:generate -DgroupId=ua.com.alevel -DartifactId=app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`
+### Lets SET M2_HOME ###
+#### `cd maven_home`
+#### `setmvnenv.bat`
+#### `cd..`
+
 ### create jar file ###
-`$ mvn clean install`
+#### `cd app`
+` mvn clean install`
 ### Run program ###
-`$ java -jar target/app-1.0-SNAPSHOT.jar `
+` java -jar target/app-1.0-SNAPSHOT.jar `

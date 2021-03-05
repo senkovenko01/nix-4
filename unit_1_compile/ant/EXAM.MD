@@ -1,6 +1,8 @@
-### Back to dir from dir ant###
-`cd../../ant_home`
+### Lets set ANT_HOME###
+`cd ant_home`
 ### SET ANT_HOME ###
 `setantenv.bat`
-### SET ANT_HOME(FOR NX) ###
-`setantenv.sh`
+### Back to dir ant ###
+`cd..`
+### Run Programm ###
+`ant clean compile jar run`
