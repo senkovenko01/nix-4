@@ -10,3 +10,4 @@ call cd..
 call cd maven
 @echo off
 call runMaven.bat
+call pause
