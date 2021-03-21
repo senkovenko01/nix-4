@@ -2,21 +2,38 @@ package ua.com.alevel.application;
 
 import ua.com.alevel.service.Calculator;
 import ua.com.alevel.service.ConsoleHelper;
-import ua.com.alevel.service.factory.CalculatorFactory;
-import ua.com.alevel.service.factory.ConsoleHelperFactory;
+import ua.com.alevel.service.factory.Factory;
 
 import java.math.BigInteger;
 
 public class App {
-    private final Calculator calculator = CalculatorFactory.getInstance().getCalculator();
-    private final ConsoleHelper consoleHelper = ConsoleHelperFactory.getInstance().getConsoleHelper();
+    private final Calculator calculator = Factory.getInstance().getCalculator();
+    private final ConsoleHelper consoleHelper = Factory.getInstance().getConsoleHelper();
 
 
-    public void console(){
+    public void console() {
+        consoleHelper.output("Write two numbers");
         BigInteger a = consoleHelper.input().nextBigInteger();
         BigInteger b = consoleHelper.input().nextBigInteger();
-        BigInteger res = calculator.sum(a,b);
+        consoleHelper.output("Select operation:\n" +
+                " \"1\" if you want calculate the sum\n" +
+                " \"2\" if you want calculate the multiply\n" +
+                "\"3\" if you want calculate the subtract");
+        int check = consoleHelper.input().nextInt();
+        switch (check) {
 
-        consoleHelper.output(res);
+            case 1:
+                consoleHelper.output("Result: " + calculator.sum(a, b));
+                break;
+            case 2:
+                consoleHelper.output("Result: " + calculator.multiply(a, b));
+                break;
+            case 3:
+                consoleHelper.output("Result: " + calculator.subtract(a, b));
+                break;
+            default:
+                throw new RuntimeException("Incorrect variant!!!");
+        }
+
     }
 }
