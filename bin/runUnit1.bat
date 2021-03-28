@@ -1,4 +1,5 @@
 @echo off
+call cd..
 call cd unit_1_compile/simple
 @echo off
 call runSimple.bat

@@ -1,5 +1,5 @@
 # Hi user
-
+### You have to go to the directory "bin"
 ### Unit_1:
 ###### 1: If you want to run program unit_1_compile, press "runUnit1".
 ###### All necessary components for running will be installed!
@@ -13,6 +13,9 @@
 
 ### Unit_4
 ###### If you want to run program unit_4_string, press "runUnit4"
+
+### Module_1
+#### if you want to test how my module tasks works, press "run_module1"
 
 
 ###### If you do not have an installed Maven, then firstly press maven_home, then back to the first point

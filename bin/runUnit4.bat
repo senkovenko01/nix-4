@@ -1,4 +1,5 @@
 @echo off
+call cd..
 echo Move to directory with unit_4 program
 call cd unit_4_string
 call mvn clean install
