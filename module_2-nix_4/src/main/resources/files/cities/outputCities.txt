@@ -1,0 +1,5 @@
+Shortest way from Gdansk to Warsaw is: | Gdansk -> Bydgoszcz -> Torun -> Warsaw | Length = 3
+Shortest way from Bydgoszcz to Warsaw is: | Bydgoszcz -> Torun -> Warsaw | Length = 2
+Shortest way from Gdansk to Kharkov is: | Gdansk -> Bydgoszcz -> Torun -> Kharkov | Length = 7
+Shortest way from Kharkov to Gdansk is: | Kharkov -> Torun -> Bydgoszcz -> Gdansk | Length = 7
+Shortest way from Warsaw to Kharkov is: | Warsaw -> Kharkov | Length = 4

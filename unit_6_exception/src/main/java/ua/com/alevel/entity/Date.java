@@ -28,7 +28,7 @@ public class Date {
             if (Integer.parseInt(this.month) > 12 || Integer.parseInt(this.month) <= 0) {
                 throw new InvalidInput(InvalidInput.MONTH_EXCEPTION);
             }
-            if (Integer.parseInt(this.year) <= 0) {
+            if (Integer.parseInt(this.year) < 0) {
                 throw new InvalidInput(InvalidInput.YEAR_EXCEPTION);
             }
             this.dataInDayFormat = getDayInMonth() + getDayInYear() + getDays();
@@ -55,7 +55,7 @@ public class Date {
             if (Integer.parseInt(this.month) > 12 || Integer.parseInt(this.month) <= 0) {
                 throw new InvalidInput(InvalidInput.MONTH_EXCEPTION);
             }
-            if (Integer.parseInt(this.year) <= 0) {
+            if (Integer.parseInt(this.year) < 0) {
                 throw new InvalidInput(InvalidInput.YEAR_EXCEPTION);
             }
             this.dataInDayFormat = getDayInMonth() + getDayInYear() + getDays();

@@ -7,7 +7,7 @@ public class Time {
     private int minutes = 0;
     private int seconds = 0;
 
-    public Time(String seconds, String minutes, String hours) {
+    public Time(String hours, String minutes, String seconds) {
         this.hours = Integer.parseInt(hours);
         this.minutes = Integer.parseInt(minutes);
         this.seconds = Integer.parseInt(seconds);
