@@ -1,7 +1,7 @@
 package ua.com.alevel.util;
 
-import ua.com.alevel.entity.Location;
-import ua.com.alevel.entity.Route;
+import ua.com.alevel.model.Location;
+import ua.com.alevel.model.Route;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleWeightedGraph;

@@ -5,10 +5,10 @@ import ua.com.alevel.dao.impl.ProblemDAOImpl;
 import ua.com.alevel.dao.impl.RouteDAOImpl;
 import ua.com.alevel.dao.impl.SolutionDAOImpl;
 import ua.com.alevel.util.ConnectionManager;
-import ua.com.alevel.entity.Location;
-import ua.com.alevel.entity.Problem;
-import ua.com.alevel.entity.Route;
-import ua.com.alevel.entity.Solution;
+import ua.com.alevel.model.Location;
+import ua.com.alevel.model.Problem;
+import ua.com.alevel.model.Route;
+import ua.com.alevel.model.Solution;
 import ua.com.alevel.util.PathInGraph;
 
 import java.sql.Connection;
@@ -17,8 +17,8 @@ import java.util.List;
 
 public class MainApplication {
     public static void main(String[] args) {
-        try {
-            Connection connection = ConnectionManager.getConnection();
+        try (Connection connection = ConnectionManager.getConnection()) {
+
             LocationDAOImpl locationDAOImpl = new LocationDAOImpl(connection);
             RouteDAOImpl routeDAOImpl = new RouteDAOImpl(connection);
             ProblemDAOImpl problemDAOImpl = new ProblemDAOImpl(connection);
@@ -34,9 +34,9 @@ public class MainApplication {
                 Solution solution = new Solution(cost);
                 solutionDAOimpl.update(problem.getId(), solution);
             }
-            connection.close();
+
         } catch (SQLException exception) {
-            exception.printStackTrace();
+            throw new RuntimeException(exception);
         }
     }
 }

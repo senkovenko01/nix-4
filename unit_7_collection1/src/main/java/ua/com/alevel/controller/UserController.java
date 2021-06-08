@@ -1,6 +1,6 @@
 package ua.com.alevel.controller;
 
-import ua.com.alevel.entity.User;
+import ua.com.alevel.model.User;
 import ua.com.alevel.list.OrderedList;
 
 import java.util.List;

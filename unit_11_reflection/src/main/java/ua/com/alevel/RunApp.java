@@ -11,14 +11,7 @@ public class RunApp {
 
     public static void main(String[] args) {
 
-        Properties properties;
-
-        try (Reader input = Files.newBufferedReader(Paths.get("unit_11_reflection/src/main/resources/app.properties"))) {
-            properties = new Properties();
-            properties.load(input);
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
-        }
+        Properties properties = ParseProperty.loadProp("/app.properties");
         ParseProperty parseProperty = new ParseProperty();
         AppProperties appProperties = parseProperty.create(properties, AppProperties.class);
 

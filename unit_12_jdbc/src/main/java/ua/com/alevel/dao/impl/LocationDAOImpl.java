@@ -1,7 +1,7 @@
 package ua.com.alevel.dao.impl;
 
 import ua.com.alevel.dao.BaseEntityDAO;
-import ua.com.alevel.entity.Location;
+import ua.com.alevel.model.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +30,7 @@ public class LocationDAOImpl implements BaseEntityDAO<Location> {
                 locations.add(new Location(resultSet.getInt("id"), resultSet.getString("name")));
             }
         } catch (SQLException exception) {
-            exception.printStackTrace();
+            throw new RuntimeException(exception);
         }
         log.info("Read all locations");
         return locations;

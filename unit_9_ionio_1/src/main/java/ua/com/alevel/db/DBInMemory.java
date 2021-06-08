@@ -2,9 +2,9 @@ package ua.com.alevel.db;
 
 import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
-import ua.com.alevel.entity.Author;
-import ua.com.alevel.entity.BaseEntity;
-import ua.com.alevel.entity.Book;
+import ua.com.alevel.model.Author;
+import ua.com.alevel.model.BaseEntity;
+import ua.com.alevel.model.Book;
 
 import java.io.File;
 import java.io.FileReader;

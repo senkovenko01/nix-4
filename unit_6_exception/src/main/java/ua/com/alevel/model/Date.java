@@ -1,4 +1,4 @@
-package ua.com.alevel.entity;
+package ua.com.alevel.model;
 
 import ua.com.alevel.exceptions.InvalidInput;
 

@@ -1,6 +1,6 @@
 package ua.com.alevel.services;
 
-import ua.com.alevel.entity.Month;
+import ua.com.alevel.model.Month;
 import ua.com.alevel.exceptions.InvalidInput;
 import ua.com.alevel.exceptions.NoExistentDateFormat;
 

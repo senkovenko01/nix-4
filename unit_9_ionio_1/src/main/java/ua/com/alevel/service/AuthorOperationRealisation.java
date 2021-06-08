@@ -5,7 +5,7 @@ import ua.com.alevel.dao.AuthorDAO;
 import ua.com.alevel.dao.BookDAO;
 import ua.com.alevel.dao.impl.AuthorDAOImpl;
 import ua.com.alevel.dao.impl.BookDAOImpl;
-import ua.com.alevel.entity.Author;
+import ua.com.alevel.model.Author;
 
 import java.util.List;
 

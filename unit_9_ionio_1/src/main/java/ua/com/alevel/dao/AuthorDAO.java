@@ -1,6 +1,6 @@
 package ua.com.alevel.dao;
 
-import ua.com.alevel.entity.Author;
+import ua.com.alevel.model.Author;
 
 import java.util.List;
 

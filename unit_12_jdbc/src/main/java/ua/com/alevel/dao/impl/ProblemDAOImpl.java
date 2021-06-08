@@ -1,7 +1,7 @@
 package ua.com.alevel.dao.impl;
 
 import ua.com.alevel.dao.BaseEntityDAO;
-import ua.com.alevel.entity.Problem;
+import ua.com.alevel.model.Problem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +30,7 @@ public class ProblemDAOImpl implements BaseEntityDAO<Problem> {
                 problems.add(new Problem(resultSet.getInt("id"), resultSet.getInt("id_from"), resultSet.getInt("id_to")));
             }
         } catch (SQLException exception) {
-            exception.printStackTrace();
+            throw new RuntimeException(exception);
         }
         log.info("Read all problems");
         return problems;

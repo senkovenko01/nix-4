@@ -1,6 +1,6 @@
 package ua.com.alevel.services;
 
-import ua.com.alevel.entity.Date;
+import ua.com.alevel.model.Date;
 import ua.com.alevel.utils.DateUtils;
 
 import java.util.List;

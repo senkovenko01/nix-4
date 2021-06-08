@@ -2,8 +2,8 @@ package ua.com.alevel.dao.impl;
 
 import ua.com.alevel.dao.BookDAO;
 import ua.com.alevel.db.DBInMemory;
-import ua.com.alevel.entity.Author;
-import ua.com.alevel.entity.Book;
+import ua.com.alevel.model.Author;
+import ua.com.alevel.model.Book;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,14 +1,15 @@
-package ua.com.alevel.entity;
+package ua.com.alevel.model;
 
 import lombok.*;
 
-@Generated
-@Getter
 @Setter
+@Getter
+@Generated
 @AllArgsConstructor
 @ToString
-public class Problem {
+public class Route {
     private int id;
     private int idFrom;
     private int idTo;
+    private int cost;
 }

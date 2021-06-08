@@ -1,7 +1,7 @@
 package ua.com.alevel.dao.impl;
 
 import ua.com.alevel.dao.BaseEntityDAO;
-import ua.com.alevel.entity.Route;
+import ua.com.alevel.model.Route;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,7 +14,7 @@ import java.util.List;
 
 public class RouteDAOImpl implements BaseEntityDAO<Route> {
     private static final Logger log = LoggerFactory.getLogger(LocationDAOImpl.class);
-    private Connection connection;
+    private final Connection connection;
 
     public RouteDAOImpl(Connection c) {
         connection = c;
@@ -33,7 +33,7 @@ public class RouteDAOImpl implements BaseEntityDAO<Route> {
                         resultSet.getInt("cost")));
             }
         } catch (SQLException exception) {
-            exception.printStackTrace();
+            throw new RuntimeException(exception);
         }
         log.info("Read all routes");
         return routes;

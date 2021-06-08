@@ -1,5 +1,8 @@
 package ua.com.alevel;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UncheckedIOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -39,6 +42,18 @@ public final class ParseProperty {
         }
 
 
+    }
+
+    public static Properties loadProp(String file) {
+        Properties properties = new Properties();
+
+        try (InputStream is = ParseProperty.class.getResourceAsStream(file)) {
+            properties.load(is);
+
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+        return properties;
     }
 
 }

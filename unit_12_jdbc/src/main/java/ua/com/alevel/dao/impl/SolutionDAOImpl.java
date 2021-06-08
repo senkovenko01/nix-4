@@ -1,7 +1,7 @@
 package ua.com.alevel.dao.impl;
 
 import ua.com.alevel.dao.BaseEntityDAO;
-import ua.com.alevel.entity.Solution;
+import ua.com.alevel.model.Solution;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,6 +40,7 @@ public class SolutionDAOImpl implements BaseEntityDAO<Solution> {
         log.info("Read all solutions");
         return solutions;
     }
+
     @Override
     public void update(int id, Solution solution) {
         log.info("Start updating solution with id: " + id);
@@ -50,9 +51,10 @@ public class SolutionDAOImpl implements BaseEntityDAO<Solution> {
             update.execute();
             log.info("Solution with id: " + id + " cost: " + solution.getCost());
         } catch (SQLException exception) {
-            exception.printStackTrace();
+            throw new RuntimeException(exception);
         }
     }
+
     public Solution read(int problemId) {
         log.info("Start reading solution with id: " + problemId);
         try (PreparedStatement readById = connection.prepareStatement("SELECT * FROM solution WHERE problem_id = ?")) {
@@ -66,7 +68,7 @@ public class SolutionDAOImpl implements BaseEntityDAO<Solution> {
                 }
             }
         } catch (SQLException exception) {
-            exception.printStackTrace();
+            throw new RuntimeException(exception);
         }
         return null;
     }
